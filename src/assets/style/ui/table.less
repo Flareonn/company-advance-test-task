@@ -1,0 +1,45 @@
+table {
+  border-collapse: separate;
+}
+
+th,
+td,
+tbody,
+thead {
+  border: 1px solid @g-main;
+}
+th,
+td {
+  padding: 2rem;
+}
+th {
+  user-select: none;
+}
+th.sort {
+  cursor: pointer;
+}
+
+.base-table {
+  width: 100%;
+  &-row {
+    position: relative;
+    .base-table-actions {
+      position: absolute;
+      top: 0;
+      left: 100%;
+
+      background-color: @g-main;
+      border-radius: 0px 10px 10px 0px;
+      height: 100%;
+      padding: 0px 10px;
+
+      display: none;
+    }
+    &:hover .base-table-actions:not(:empty) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+}

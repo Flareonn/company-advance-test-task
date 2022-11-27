@@ -1,0 +1,14 @@
+.btn {
+  background-color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: @g-main;
+    color: #fff;
+  }
+  &:disabled {
+    background-color: gray;
+    pointer-events: none;
+    cursor: default;
+    border-color: currentColor;
+  }
+}
